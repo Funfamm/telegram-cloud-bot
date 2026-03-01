@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: telegram-cloud-bot
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
